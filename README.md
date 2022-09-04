@@ -1,8 +1,3 @@
----
-layout: default
-style: table
----
-
 # Project #1 - Unix Utilities wzip and wunzip
 
 Accept the Project 1 GitHub Classroom assignment posted to Moodle.
