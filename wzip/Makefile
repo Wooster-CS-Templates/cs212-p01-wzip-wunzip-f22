@@ -4,8 +4,8 @@ wzip:
 test:
 	./test-wzip.sh
 
-gh-test: clean wzip test
-
 clean:
 	rm -f wzip
 	rm -rf tests-out
+
+gh-test: clean wzip test
