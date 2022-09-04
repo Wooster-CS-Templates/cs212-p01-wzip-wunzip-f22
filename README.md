@@ -1,5 +1,11 @@
+---
+layout: default
+style: table
+---
 
-# Project #1 - Unix Utilities Wzip and Wunzip
+# Project #1 - Unix Utilities wzip and wunzip
+
+Accept the Project 1 GitHub Classroom assignment posted to Moodle.
 
 Summary of what gets turned in:
 * Commited changes to the .c files for each of the utilities below:
@@ -47,7 +53,15 @@ prompt> xxd -b out.z
 00000000: 00001010 00000000 00000000 00000000 01100001 00000100  ....a.
 00000006: 00000000 00000000 00000000 01100010                    ...b
 ```
-The content after the colon (`:`) and before the text representations (starting with `....a`) is the correct binary data. The `xxd` program displays binary data in hexidecimal format if you remove the `-b` option. Note that `00001010` is 10 in deciaml, and `01100001` is 97 which is the ASCII for lower case `a`. If you are wondering why the binary `00001010 00000000 00000000 00000000` means 10 is due to the use of little-endian byte order (you can read more about this [here](https://www.section.io/engineering-education/what-is-little-endian-and-big-endian/)). The important thing to remember is that the groups of 4 bytes (8 bits each) representing your number portion of the data are automatically stored in reverse order. So `00001010 00000000 00000000 00000000` is actaully `00000000 00000000 00000000 00001010` or 10. Notice how the order of the bits didn't change, just the ordering of the entire bytes. You don't have to worry about this when considering the ASCII characters because their data is always contained within one byte. See if you can find the 4 and the letter b in the rest of the data above.
+The content after the colon (`:`) and before the text representations (starting with `....a`) is the correct binary data. The `xxd` program displays binary data in hexidecimal format if you remove the `-b` option. Note that `00001010` is 10 in deciaml, and `01100001` is 97 which is the ASCII for lower case `a`. If you are wondering why the binary `00001010 00000000 00000000 00000000` means 10 is due to the use of little-endian byte order (you can read more about this [here](https://www.section.io/engineering-education/what-is-little-endian-and-big-endian/)). The important thing to remember is that the groups of 4 bytes (8 bits each) representing your number portion of the data are automatically stored in reverse order. So:
+```
+00001010 00000000 00000000 00000000
+```
+should actually be read as:
+```
+00000000 00000000 00000000 00001010
+```
+which is 10. Notice how the order of the bits didn't change, just the ordering of the entire bytes. You don't have to worry about this when considering the ASCII characters because their data is always contained within one byte. See if you can find the 4 and the letter b in the rest of the data above.
 
 The **wunzip** tool simply does the reverse of the **wzip** tool, taking in a compressed file and writing (to standard output again) the uncompressed results. For example, to see the contents of **file.txt**, you would type:
 
