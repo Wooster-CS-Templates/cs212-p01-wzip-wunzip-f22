@@ -69,6 +69,6 @@ aaaaaaaaaabbbb
 
 ## Grading 18 points
 
-    6 points - All wzip tests pass
-    6 points - All wunzip tests pass
-    6 points - Code follows the [class style guidelines](http://csweb.wooster.edu/dguarnera/cs212/resources/guides/style-guidelines.html)
+* 6 points - All wzip tests pass
+* 6 points - All wunzip tests pass
+* 6 points - Code follows the [class style guidelines](http://csweb.wooster.edu/dguarnera/cs212/resources/guides/style-guidelines.html)
